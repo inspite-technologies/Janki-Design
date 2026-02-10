@@ -6,7 +6,8 @@ import {
     Invoice,
     InventoryItem,
     DashboardStats,
-    ApiResponse
+    ApiResponse,
+    Tailor
 } from '@/types';
 import {
     MOCK_ORDERS,
@@ -555,13 +556,9 @@ export const CustomersAPI = {
     create: async (data: Omit<Customer, 'id'>) => {
         await new Promise(resolve => setTimeout(resolve, 600));
         const newCustomer: Customer = {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            location: data.location || '',
             ...data,
             id: `#JD-${Math.floor(Math.random() * 1000).toString().padStart(3, '0')}`,
-            avatar_url: '', // Default or random
+            avatar_url: data.avatar_url || '',
             type: data.type || 'New'
         };
         localCustomers.unshift(newCustomer);
