@@ -109,6 +109,8 @@ export interface SalesData {
     day: string;
     sales: number;
     orders?: number;
+    products: number;
+    stitching: number;
 }
 // Tailor Management
 export interface Tailor {
