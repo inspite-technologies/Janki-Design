@@ -120,8 +120,8 @@ export interface Tailor {
     phone: string;
     email?: string;
     status: 'Active' | 'On Leave' | 'Inactive';
-    joined_date: string; // ISO
-    current_load?: number; // Number of active orders
-    rating?: number; // 0-5
+    joined_date?: string; // Changed to optional
+    current_load?: number;
+    rating?: number;
     avatar_url?: string;
 }
