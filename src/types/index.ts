@@ -9,11 +9,9 @@ export interface ApiResponse<T> {
         limit: number;
     };
 }
-
 // Order Types
 export type OrderStatus = 'Pending' | 'Processing' | 'Completed' | 'Cancelled' | 'Delivered' | 'Shipped';
 export type OrderType = 'Stitching' | 'Boutique' | 'Alteration' | 'Custom';
-
 export interface Order {
     id: string;
     customer_name: string;
@@ -25,7 +23,6 @@ export interface Order {
     items?: number; // Count of items
     delivery_date?: string; // ISO Date string
 }
-
 // Customer Types
 export interface Customer {
     id: string;
@@ -39,10 +36,8 @@ export interface Customer {
     avatar_url?: string;
     joined_date?: string;
 }
-
 // Product / Catalogue Types
 export type ProductStockStatus = 'In Stock' | 'Low Stock' | 'Out of Stock' | 'Made to Order';
-
 export interface Product {
     id: string;
     name: string;
@@ -58,7 +53,6 @@ export interface Product {
     description?: string;
     is_stitch_to_order?: boolean;
 }
-
 // Inventory / Material Types
 export interface InventoryItem {
     id: string;
@@ -72,7 +66,6 @@ export interface InventoryItem {
     stock_status: 'Healthy' | 'Low' | 'Critical';
     last_restocked?: string;
 }
-
 // Invoice Types
 export interface Invoice {
     id: string;
@@ -83,7 +76,6 @@ export interface Invoice {
     status: 'Paid' | 'Pending' | 'Overdue';
     pdf_url?: string;
 }
-
 // Dashboard Statistics
 export interface DashboardStats {
     todays_revenue: number;
@@ -93,7 +85,6 @@ export interface DashboardStats {
     low_stock_alerts: number;
     revenue_growth?: number; // Percentage
 }
-
 // Dashboard Extended Types
 export interface RecentActivity {
     id: string;
@@ -104,7 +95,6 @@ export interface RecentActivity {
     icon_bg: string;
     icon_color: string;
 }
-
 export interface UrgentDelivery {
     id: string;
     customer_name: string;
@@ -113,14 +103,13 @@ export interface UrgentDelivery {
     urgent_level: 'High' | 'Medium';
     image_url: string;
 }
-
 // Sales Data for Charts
 export interface SalesData {
     date: string;
+    day: string;
     sales: number;
     orders?: number;
 }
-
 // Tailor Management
 export interface Tailor {
     id: string;
