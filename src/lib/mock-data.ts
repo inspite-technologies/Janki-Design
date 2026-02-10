@@ -157,13 +157,13 @@ export const MOCK_URGENT_DELIVERIES: import('@/types').UrgentDelivery[] = [
 ];
 
 export const MOCK_SALES_DATA: import('@/types').SalesData[] = [
-    { day: "Mon", stitching: 10, products: 5 },
-    { day: "Tue", stitching: 25, products: 15 },
-    { day: "Wed", stitching: 18, products: 10 },
-    { day: "Thu", stitching: 30, products: 20 },
-    { day: "Fri", stitching: 45, products: 25 },
-    { day: "Sat", stitching: 60, products: 40 },
-    { day: "Sun", stitching: 50, products: 35 },
+    { day: "Mon", date: "2024-02-05", stitching: 10, products: 5, sales: 15 },
+    { day: "Tue", date: "2024-02-06", stitching: 25, products: 15, sales: 40 },
+    { day: "Wed", date: "2024-02-07", stitching: 18, products: 10, sales: 28 },
+    { day: "Thu", date: "2024-02-08", stitching: 30, products: 20, sales: 50 },
+    { day: "Fri", date: "2024-02-09", stitching: 45, products: 25, sales: 70 },
+    { day: "Sat", date: "2024-02-10", stitching: 60, products: 40, sales: 100 },
+    { day: "Sun", date: "2024-02-11", stitching: 50, products: 35, sales: 85 },
 ];
 
 export const MOCK_TAILORS: import('@/types').Tailor[] = [
