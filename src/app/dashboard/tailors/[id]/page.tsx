@@ -124,7 +124,7 @@ export default function TailorProfilePage({ params }: { params: Promise<{ id: st
                                     <div>
                                         <p className="text-xs text-[#88636c] mb-1">Joined</p>
                                         <p className="text-sm font-medium text-[#181113] dark:text-white">
-                                            {new Date(tailor.joined_date).toLocaleDateString()}
+                                            {tailor.joined_date ? new Date(tailor.joined_date).toLocaleDateString() : 'N/A'}
                                         </p>
                                     </div>
                                     {tailor.rating && (
